@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.3.4/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="public/style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="title">
+            <h2>My Blog 📋</h2>
+        </div>
+        <div class="btn-new-post">
+            <button>
+                new post <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+        <div id="post-content">
+            <h3 class="post-content-title"></h3>
+            <p class="post-content-content">.</p>
+            <p class="post-content-author"></p>
+            <p class="post-content-time-added"></p>
+            <div class="btn-post-content">
+                <button class="edit-post-btn">edit</button>
+                <button class="remove-post-btn">remove</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./public/src/app.js"></script>
+</body>
+</html>
