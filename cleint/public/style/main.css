@@ -28,6 +28,27 @@ body {
     gap: 20px;
 }
 
+.main-container .btn-new-post > button {
+    height: 40px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(64, 64, 247);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.main-container .btn-new-post > button:hover {
+    background-color: rgb(45, 45, 200);
+    transform: scale(1.05); 
+}
+
 .main-container .post-content {
     padding: 20px;
     max-height: 200px;
@@ -38,6 +59,104 @@ body {
     line-height: 1.5rem;
     margin-bottom: 20px;
 }
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Input Field */
+.input-container input {
+    width: 100%;
+    height: 50px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: transparent;
+}
+
+#content-input input {
+    height: 200px;
+}
+
+/* Floating label */
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    color: #888;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+/* Move label up when input is focused or has text */
+.input-container input:focus ~ label,
+.input-container input:not(:placeholder-shown) ~ label {
+    top: 1px;
+    left: 12px;
+    font-size: 16px;
+    color: rgb(64, 64, 247);
+}
+
+.input-container input:focus{
+    border-color: rgb(64, 64, 247);
+}
+
+.modal-content button {
+    margin-top: 40px;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(64, 64, 247);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.modal-content button:hover {
+    background-color: rgb(34, 34, 200);
+    transform: scale(1.05); 
+}
+
+
+
+
 
 
 

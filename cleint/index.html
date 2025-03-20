@@ -14,10 +14,12 @@
             <h2>My Blog 📋</h2>
         </div>
         <div class="btn-new-post">
-            <button>
+            <button id="open-modal-btn">
                 new post <i class="fa-solid fa-plus"></i>
             </button>
         </div>
+
+        <!--The Post content-->
         <div id="post-content">
             <h3 class="post-content-title"></h3>
             <p class="post-content-content">.</p>
@@ -28,6 +30,34 @@
                 <button class="remove-post-btn">remove</button>
             </div>
         </div>
+
+        <!-- Modal Container for New Post -->
+        <div id="new-post-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Create a New Post</h2>
+
+                <div class="input-container">
+                    <input type="text" id="post-title" placeholder=" ">
+                    <label for="post-title">Title</label>
+                </div>
+                
+                <div class="input-container" id="content-input">
+                    <input type="text" id="post-content" placeholder=" ">
+                    <label for="post-content">Content</label>
+                </div>
+                
+                <div class="input-container">
+                    <input type="text" id="post-author" placeholder=" ">
+                    <label for="post-author">Author</label>
+                </div>
+                
+                <button class="submit-post-btn">Submit Post</button>
+                
+            </div>
+        </div>
+
+
     </div>
     <script type="module" src="./public/src/app.js"></script>
 </body>

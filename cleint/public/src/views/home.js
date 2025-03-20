@@ -1,5 +1,7 @@
 import { getPosts } from "../api/getPosts.js";
 
+
+// fetching the data from the backend
 export async function loadHomePage() {
     try {
         const postContent = document.getElementById("post-content");
@@ -29,3 +31,27 @@ export async function loadHomePage() {
         console.error("Error loading posts:", error);
     }
 }
+
+ // open the new post modal
+document.addEventListener("DOMContentLoaded", function () {
+    const openModalBtn = document.getElementById("open-modal-btn");
+    const modal = document.getElementById("new-post-modal");
+    const closeModalBtn = document.querySelector(".close-btn");
+
+    // Show Modal when clicking "New Post"
+    openModalBtn.addEventListener("click", function () {
+        modal.style.display = "flex"; // Show modal
+    });
+
+    // Close Modal when clicking "X"
+    closeModalBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // close the model when clicking outside
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
